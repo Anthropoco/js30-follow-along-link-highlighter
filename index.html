@@ -32,18 +32,18 @@
         }
         
         .highlight {
-            background: white;
-            position: absolute;
+            background-color: white;
+            /* position: absolute;
             width: 30px;
             height: 1em;
-            display: none;
+            display: none; */
         }
     </style>
 
 </head>
 
 <body>
-    <div class="highlight"></div>
+    <!-- <div class="highlight"></div> -->
     <nav>
         <button class="highlightable">Home</button>
         <button class="highlightable">About Us</button>
@@ -57,6 +57,25 @@
         <p><span class="highlightable">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. <span class="highlightable">Quaerat</span> voluptate, minus voluptates quod deleniti aperiam consequuntur porro nisi temporibus quasi tempore velit perferend
             iseos et. Facilis beatae aliquam odit tempore!</p>
     </article>
+    <script>
+        //fetch elements
+        let highlighter = document.querySelector('.highlight');
+        let hotSpots = document.querySelectorAll('.highlightable');
+
+        //highlight element
+        function toggleHighlight(e) {
+            this.classList.toggle('highlight');
+            console.dir(this);
+            console.dir(e);
+        }
+
+        //hook up listener
+        Array.from(hotSpots).forEach((hotSpot) => {
+            hotSpot.addEventListener('mouseenter', toggleHighlight);
+            hotSpot.addEventListener('mouseleave', toggleHighlight);
+            // console.log(hotSpot);
+        })
+    </script>
 </body>
 
 </html
