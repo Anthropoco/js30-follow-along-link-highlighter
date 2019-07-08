@@ -36,6 +36,8 @@
             position: absolute;
             width: 30px;
             height: 1em;
+            top: 0;
+            left: 0;
             /* display: none; */
         }
     </style>
@@ -64,7 +66,11 @@
 
         //highlight element
         function toggleHighlight(e) {
-            this.classList.toggle('highlight');
+            console.dir(highlighter);
+            highlighter.style.top = this.offsetTop + 'px';
+            highlighter.style.left = this.offsetLeft + 'px';
+            highlighter.style.width = this.offsetWidth + 'px';
+            console.log(highlighter.style.top);
             // console.dir(this);
             // console.dir(e);
         }
