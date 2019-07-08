@@ -6,20 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Follow Along Link Highlighter</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            color: black;
+            background-color: rgb(255, 255, 0);
+            font-size: x-large;
+            padding: 15px 10%;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .highlightable {
+            background: rgba(141, 9, 182, 0.4);
+            border: none;
+            border-radius: 15px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        
+        .highlight {
+            background: white;
+            position: absolute;
+            width: 30px;
+            height: 1em;
+            display: none;
+        }
+    </style>
+
 </head>
 
 <body>
-    <nav><button>Home</button>
-        <button>About Us</button>
-        <button>Contact</button>
-        <button>Products</button>
-        <button>Blog</button>
+    <div class="highlight"></div>
+    <nav>
+        <button class="highlightable">Home</button>
+        <button class="highlightable">About Us</button>
+        <button class="highlightable">Contact</button>
+        <button class="highlightable">Products</button>
+        <button class="highlightable">Blog</button>
     </nav>
     <article>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat voluptate, minus voluptates quod deleniti aperiam consequuntur porro nisi temporibus quasi tempore velit perferendis eos et. Facilis beatae aliquam odit tempore!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat voluptate, minus voluptates quod deleniti aperiam consequuntur porro nisi temporibus quasi tempore velit perferendis eos et. Facilis beatae aliquam odit tempore!</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat voluptate, minus voluptates quod deleniti aperiam consequuntur porro nisi temporibus quasi tempore velit perferendis eos et. Facilis beatae aliquam odit tempore!</p>
+        <p>Lorem <span class="highlightable">ipsum</span> dolor sit amet consectetur, adipisicing elit. Quaerat voluptate, <span class="highlightable">voluptates</span> quod deleniti aperiam consequuntur porro nisi temporibus quasi <span class="highlightable">tempore</span>            velit perferendis eos et. Facilis beatae aliquam odit tempore!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, <span class="highlightable">adipisicing</span> elit. Quaerat voluptate, minus voluptates quod deleniti aperiam consequuntur porro nisi temporibus quasi tempore velit perferendis eos et. Facilis <span class="highlightable">beatae</span>            aliquam odit tempore!</p>
+        <p><span class="highlightable">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. <span class="highlightable">Quaerat</span> voluptate, minus voluptates quod deleniti aperiam consequuntur porro nisi temporibus quasi tempore velit perferend
+            iseos et. Facilis beatae aliquam odit tempore!</p>
     </article>
 </body>
 
-</html>
+</html
