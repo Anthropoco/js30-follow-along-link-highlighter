@@ -33,17 +33,17 @@
         
         .highlight {
             background-color: white;
-            /* position: absolute;
+            position: absolute;
             width: 30px;
             height: 1em;
-            display: none; */
+            /* display: none; */
         }
     </style>
 
 </head>
 
 <body>
-    <!-- <div class="highlight"></div> -->
+    <div class="highlight"></div>
     <nav>
         <button class="highlightable">Home</button>
         <button class="highlightable">About Us</button>
@@ -65,8 +65,8 @@
         //highlight element
         function toggleHighlight(e) {
             this.classList.toggle('highlight');
-            console.dir(this);
-            console.dir(e);
+            // console.dir(this);
+            // console.dir(e);
         }
 
         //hook up listener
